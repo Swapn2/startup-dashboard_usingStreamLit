@@ -33,3 +33,17 @@ st.metric('Revenue','Rs 20 lakhs','3%')
 st.json({'name':'swapn','age':22})
 
 st.image('stuff.png')
+
+st.sidebar.title('sidebar')
+col1, col2 = st.columns(2)
+with col1:
+    st.button('button1')
+    st.image('stuff.png')
+with col2:
+    st.button('button2')
+    st.image('stuff.png')
+
+st.error('error')
+st.success('success')
+st.warning('warning')
+st.info('info')
