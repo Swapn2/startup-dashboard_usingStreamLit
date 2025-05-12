@@ -7,7 +7,6 @@
     <list default="true" id="929a943a-6df5-4d02-8d20-a3870f15fcfd" name="Changes" comment="do it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/streamlit_doc.py" beforeDir="false" afterPath="$PROJECT_DIR$/streamlit_doc.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +99,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746977263643</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="do it">
+      <option name="closed" value="true" />
+      <created>1746980846788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746980846788</updated>
+    </task>
+    <task id="LOCAL-00006" summary="do it">
+      <option name="closed" value="true" />
+      <created>1746980882949</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746980882949</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
