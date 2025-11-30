@@ -71,6 +71,7 @@ def load_overall_analysis():
     temp_df['x_axis'] = temp_df['year'].astype(str) + '-' + temp_df['month'].astype(str)
     fig3, ax3 = plt.subplots()
     ax3.plot(temp_df['x_axis'],temp_df['amount'])
+    ax3.tick_params(axis='x', labelrotation=90)
     st.pyplot(fig3)
    
 
