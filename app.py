@@ -61,16 +61,37 @@ def load_overall_analysis():
     with col4:
         st.metric('Total_funded_startups', str(total_funded_startups))
         # st.metric('max city',df.groupby('city')['amount'].sum().sort_values(ascending=False).head(1).index[0])
-    st.header('MoM Graph : (2015 - 2020')
-    selected_option = st.selectbox('select type',['total','count'])
-    if selected_option == 'total':
-        temp_df = df.groupby(['year', 'month'])['amount'].sum().reset_index()
-    else:
-        temp_df = df.groupby(['year', 'month'])['amount'].count().reset_index()
-    temp_df['x_axis'] = temp_df['year'].astype(str) + '-' + temp_df['month'].astype(str)
-    fig3, ax3 = plt.subplots()
-    ax3.plot(temp_df['x_axis'],temp_df['amount'])
-    st.pyplot(fig3)
+    # st.header('MoM Graph : (2015 - 2020')
+    # selected_option = st.selectbox('select type',['total','count'])
+    # if selected_option == 'total':
+    #     temp_df = df.groupby(['year', 'month'])['amount'].sum().reset_index()
+    # else:
+    #     temp_df = df.groupby(['year', 'month'])['amount'].count().reset_index()
+    # temp_df['x_axis'] = temp_df['year'].astype(str) + '-' + temp_df['month'].astype(str)
+    # fig3, ax3 = plt.subplots()
+    # ax3.plot(temp_df['x_axis'],temp_df['amount'])
+    # st.pyplot(fig3)
+   st.header('MoM Graph : (2015 - 2020)')
+   selected_option = st.selectbox('select type', ['total', 'count'])
+    
+   if selected_option == 'total':
+       temp_df = df.groupby(['year', 'month'])['amount'].sum().reset_index()
+   else:
+       temp_df = df.groupby(['year', 'month'])['amount'].count().reset_index()
+    
+    # Create Year-Month label
+   temp_df['x_axis'] = temp_df['year'].astype(str) + '-' + temp_df['month'].astype(str)
+    
+   fig3, ax3 = plt.subplots()
+   ax3.plot(temp_df['x_axis'], temp_df['amount'])
+    
+    # 🔥 FIX FOR MESSY X-AXIS
+   ax3.tick_params(axis='x', labelrotation=90)     # rotate labels
+   ax3.set_xlabel("Year-Month")
+   ax3.set_ylabel("Amount")
+    
+   st.pyplot(fig3)
+
 
 st.sidebar.title('startup Funding Analysis')
 
