@@ -72,6 +72,7 @@ def load_overall_analysis():
     fig3, ax3 = plt.subplots()
     ax3.plot(temp_df['x_axis'],temp_df['amount'])
     ax3.tick_params(axis='x', labelrotation=90)
+    ax3.set_xticks(ax3.get_xticks()[::3])
     st.pyplot(fig3)
    
 
